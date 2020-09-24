@@ -1,4 +1,4 @@
-# Google-Maps-Emulated-Animated-Marker
+# Google-Maps-Animated-Marker
 Emulates the movement of a vehicle on a predefined set path using Google Maps API.
 
 Here's what the following code can do.
