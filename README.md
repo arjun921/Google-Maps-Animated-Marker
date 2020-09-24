@@ -5,7 +5,7 @@ Here's what the following code can do.
 
 - Draw path as dotted lines
 - Conditionally animate the path.
-- Draw a moving on top of path to emulate moving object.
+- Draw a moving object on the path
 
 
 
