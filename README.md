@@ -8,7 +8,10 @@ Here's what the following code can do.
 - Draw a moving object on the path
 
 
-
 Here's what it looks like in action.
 
 ![alt text](https://github.com/arjun921/Google-Maps-Animated-Marker/raw/master/ezgif.com-video-to-gif-2.gif)
+
+
+To create your own animated path, head over to the following link!
+https://arjun921.github.io/Google-Maps-Animated-Marker/
