@@ -3,6 +3,7 @@
 function initMap() {
   let start = prompt('Enter starting point');
   let end = prompt('Enter Destination');
+  let speed = prompt('How fast do you want the animation to play at? -- Enter 1 for 1x, 2 for 2x');
 
   var map = new google.maps.Map(document.getElementById('map'), {
     // center: {
@@ -100,5 +101,5 @@ function animateCircle(line) {
     // icons[1].offset = (count / 2) + '%';
     icons[1].offset = (count / 2) + '%'; //+++++++++++++++++++++User this line for non dotted path and comment above line.
     line.set('icons', icons);
-  }, 100);
+  }, 100*speed);
 }
