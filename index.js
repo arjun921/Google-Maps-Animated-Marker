@@ -5,10 +5,10 @@ function initMap() {
   let end = prompt('Enter Destination');
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {
-      lat: 8.443556,
-      lng: 76.994161
-    },
+    // center: {
+    //   lat: 8.443556,
+    //   lng: 76.994161
+    // },
     zoom: 13,
     mapTypeId: 'terrain'
   });
