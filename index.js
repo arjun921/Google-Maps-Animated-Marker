@@ -1,6 +1,9 @@
 // This example adds an animated symbol to a polyline.
 
 function initMap() {
+  let start = prompt('Enter starting point');
+  let end = prompt('Enter Destination');
+
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {
       lat: 8.443556,
@@ -9,6 +12,15 @@ function initMap() {
     zoom: 13,
     mapTypeId: 'terrain'
   });
+
+  geocoder = new google.maps.Geocoder();
+  geocoder.geocode({ 'address': start }, function(results, status){
+    if (status == google.maps.GeocoderStatus.OK) {
+        map.setCenter(results[0].geometry.location);
+    } else {
+        alert("Could not find location: " + location);
+    }
+});
 
   var lineSymbol = {
     path: google.maps.SymbolPath.CIRCLE,
@@ -26,8 +38,7 @@ function initMap() {
 
   var directionsService = new google.maps.DirectionsService();
 
-  var start = "Trivandrum International Airport";
-  var end = "Neyyanttinkara";
+  
   var method = 'DRIVING';
   var request = {
     origin: start,
@@ -43,8 +54,8 @@ function initMap() {
         path: response.routes[0].overview_path,
         icons: [{
           icon: lineSymbol,
-          offset: '0',
-          repeat: '10px'
+          offset: '100%',
+          repeat: '0'
         },
         {
           icon: myMarker,
@@ -86,8 +97,8 @@ function animateCircle(line) {
   window.setInterval(function() {
     count = (count + 1) % 200;
     var icons = line.get('icons');
-    icons[1].offset = (count / 2) + '%';
-    // icons[1].offset = (count / 2) + '%'; //+++++++++++++++++++++User this line for non dotted path and comment above line.
+    // icons[1].offset = (count / 2) + '%';
+    icons[1].offset = (count / 2) + '%'; //+++++++++++++++++++++User this line for non dotted path and comment above line.
     line.set('icons', icons);
   }, 100);
 }
