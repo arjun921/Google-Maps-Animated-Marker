@@ -31,23 +31,32 @@
 
 <body>
   <ul id="support_dropdown" class="dropdown-content">
-    <li><a href="https://www.paypal.com/paypalme/arjun921">Paypal</a></li>
-    <li><a href="https://www.buymeacoffee.com/arjun921">Buy me a Coffee/Book</a></li>
+    <li><a target="blank" href="https://www.paypal.com/paypalme/arjun921">Paypal</a></li>
+    <li><a target="blank" href="https://www.buymeacoffee.com/arjun921">Buy me a Coffee/Book</a></li>
   </ul>
   <nav style="background-color: #1F07B2;">
     <div class="nav-wrapper">
       <a href="https://arjunsunil.com" class="brand-logo"><img src="images/aj_logo_transparent.png"
           style="max-height: 50px; margin-left: 0.5em; margin-top: 0.3em;" alt=""></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
       <ul class="right hide-on-med-and-down">
 
         <li><a class="modal-trigger" href="#new_map_form">New Animation</a></li>
         <li><a class="modal-trigger" href="#credits">Credits</a></li>
         <li><a class="dropdown-trigger" href="#!" data-target="support_dropdown">Support this project<i
               class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a href="http://arjunsunil.com/#about">Author</a></li>
+        <li><a target="blank" href="http://arjunsunil.com/#about">Author</a></li>
       </ul>
     </div>
   </nav>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a class="modal-trigger" href="#new_map_form">New Animation</a></li>
+        <li><a class="modal-trigger" href="#credits">Credits</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="support_dropdown">Support this project<i
+              class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a target="blank" href="http://arjunsunil.com/#about">Author</a></li>
+  </ul>
   <div id="map"></div>
   <!-- Modal Structure -->
   <div id="new_map_form" class="modal">
