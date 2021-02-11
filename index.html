@@ -1,159 +1,251 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
 
-<head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> -->
-  <meta charset="utf-8">
-  <title>Arjun Sunil | Animated Google Maps </title>
-  <style>
-    /* Always set the map height explicitly to define the size of the div
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> -->
+    <meta charset="utf-8" />
+    <title>Arjun Sunil | Animated Google Maps</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-    #map {
-      height: 100%;
-    }
+      #map {
+        height: 100%;
+      }
 
-    /* Optional: Makes the sample page fill the window. */
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-</head>
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
 
-<body>
-  <ul id="support_dropdown" class="dropdown-content">
-    <li><a target="blank" href="https://www.paypal.com/paypalme/arjun921">Paypal</a></li>
-    <li><a target="blank" href="https://www.buymeacoffee.com/arjun921">Buy me a Coffee/Book</a></li>
-  </ul>
-  <nav style="background-color: #1F07B2;">
-    <div class="nav-wrapper">
-      <a href="https://arjunsunil.com" class="brand-logo"><img src="images/aj_logo_transparent.png"
-          style="max-height: 50px; margin-left: 0.5em; margin-top: 0.3em;" alt=""></a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  <body>
+    <ul id="support_dropdown_mobile" class="dropdown-content">
+      <li>
+        <a target="blank" href="https://www.paypal.com/paypalme/arjun921"
+          >Paypal</a
+        >
+      </li>
+      <li>
+        <a target="blank" href="https://www.buymeacoffee.com/arjun921"
+          >Buy me a Coffee/Book</a
+        >
+      </li>
+    </ul>
+    <ul id="support_dropdown" class="dropdown-content">
+      <li>
+        <a target="blank" href="https://www.paypal.com/paypalme/arjun921"
+          >Paypal</a
+        >
+      </li>
+      <li>
+        <a target="blank" href="https://www.buymeacoffee.com/arjun921"
+          >Buy me a Coffee/Book</a
+        >
+      </li>
+    </ul>
+    <nav style="background-color: #1f07b2">
+      <div class="nav-wrapper">
+        <a href="https://arjunsunil.com" class="brand-logo"
+          ><img
+            src="images/aj_logo_transparent.png"
+            style="max-height: 50px; margin-left: 0.5em; margin-top: 0.3em"
+            alt=""
+        /></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
 
-      <ul class="right hide-on-med-and-down">
-
-        <li><a class="modal-trigger" href="#new_map_form">New Animation</a></li>
-        <li><a class="modal-trigger" href="#credits">Credits</a></li>
-        <li><a class="dropdown-trigger" href="#!" data-target="support_dropdown">Support this project<i
-              class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a target="blank" href="http://arjunsunil.com/#about">Author</a></li>
-      </ul>
-    </div>
-  </nav>
-  <ul class="sidenav" id="mobile-demo">
-    <li><a class="modal-trigger" href="#new_map_form">New Animation</a></li>
-        <li><a class="modal-trigger" href="#credits">Credits</a></li>
-        <li><a class="dropdown-trigger" href="#!" data-target="support_dropdown">Support this project<i
-              class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a target="blank" href="http://arjunsunil.com/#about">Author</a></li>
-  </ul>
-  <div id="map"></div>
-  <!-- Modal Structure -->
-  <div id="new_map_form" class="modal">
-    <div class="modal-content">
-      <h4>New Map Animation</h4>
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <input placeholder="eg. Mumbai, India / pincode" id="starting_point" type="text" class="validate"
-                value="Mumbai">
-              <label for="first_name">Starting Point</label>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a class="modal-trigger" href="#new_map_form">New Animation</a>
+          </li>
+          <li><a class="modal-trigger" href="#credits">Credits</a></li>
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="support_dropdown"
+              >Support this project<i class="material-icons right"
+                >arrow_drop_down</i
+              ></a
+            >
+          </li>
+          <li>
+            <a target="blank" href="http://arjunsunil.com/#about">Author</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a class="modal-trigger" href="#new_map_form">New Animation</a></li>
+      <li><a class="modal-trigger" href="#credits">Credits</a></li>
+      <li>
+        <a
+          class="dropdown-trigger"
+          href="#!"
+          data-target="support_dropdown_mobile"
+          >Support this project<i class="material-icons right"
+            >arrow_drop_down</i
+          ></a
+        >
+      </li>
+      <li><a target="blank" href="http://arjunsunil.com/#about">Author</a></li>
+    </ul>
+    <div id="map"></div>
+    <!-- Modal Structure -->
+    <div id="new_map_form" class="modal">
+      <div class="modal-content">
+        <h4>New Map Animation</h4>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input
+                  placeholder="eg. Mumbai, India / pincode"
+                  id="starting_point"
+                  type="text"
+                  class="validate"
+                  value="Mumbai"
+                />
+                <label for="first_name">Starting Point</label>
+              </div>
+              <div class="input-field col s6">
+                <input
+                  placeholder="eg. Delhi, India / pincode"
+                  id="ending_point"
+                  type="text"
+                  class="validate"
+                  value="Pune"
+                />
+                <label for="first_name">Ending Point</label>
+              </div>
             </div>
-            <div class="input-field col s6">
-              <input placeholder="eg. Delhi, India / pincode" id="ending_point" type="text" class="validate"
-                value="Pune">
-              <label for="first_name">Ending Point</label>
+            <div class="row">
+              <div class="col s12">
+                Set animation Speed -- 0.25 for 0.25x | 1 for 1x
+                <p class="range-field">
+                  <input
+                    type="range"
+                    id="speed"
+                    min="0.25"
+                    max="30"
+                    step="0.25"
+                    value="0.25"
+                  />
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col s12">
-              Set animation Speed -- 0.25 for 0.25x | 1 for 1x
-              <p class="range-field">
-                <input type="range" id="speed" min="0.25" max="30" step="0.25" value="0.25" />
-              </p>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="input-field col s12 ">
-              <select id="animated_icon">
-                <option value="circle">Circle</option>
-                <option value="forward_arrow" selected>Forward Arrow</option>
-                <option value="backward_arrow">Backward Arrow</option>
-                <option value="forward_car">Forward Car</option>
-                <option value="backward_car">Backward Car</option>
-                <option value="forward_bike">Forward Bike</option>
-                <option value="backward_bike">Backward Bike</option>
-                <option value="forward_truck">Forward Truck</option>
-                <option value="backward_truck">Backward Truck</option>
-              </select>
-              <label>Select Icon</label>
+            <div class="row">
+              <div class="input-field col s12">
+                <select id="animated_icon">
+                  <option value="circle">Circle</option>
+                  <option value="forward_arrow" selected>Forward Arrow</option>
+                  <option value="backward_arrow">Backward Arrow</option>
+                  <option value="forward_car">Forward Car</option>
+                  <option value="backward_car">Backward Car</option>
+                  <option value="forward_bike">Forward Bike</option>
+                  <option value="backward_bike">Backward Bike</option>
+                  <option value="forward_truck">Forward Truck</option>
+                  <option value="backward_truck">Backward Truck</option>
+                </select>
+                <label>Select Icon</label>
+              </div>
             </div>
-          </div>
 
-          <div class="row">
-
-            <div class="input-field col s6 ">
-              <p>Select Icon Color</p>
-              <input type="color" id="icon_color" name="icon_color" value="#e53935">
+            <div class="row">
+              <div class="input-field col s6">
+                <p>Select Icon Color</p>
+                <input
+                  type="color"
+                  id="icon_color"
+                  name="icon_color"
+                  value="#e53935"
+                />
+              </div>
+              <div class="input-field col s6">
+                <p>Select Path Color</p>
+                <input
+                  type="color"
+                  id="path_color"
+                  name="path_color"
+                  value="#0eb7f6"
+                />
+              </div>
             </div>
-            <div class="input-field col s6 ">
-              <p>Select Path Color</p>
-              <input type="color" id="path_color" name="path_color" value="#0eb7f6">
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a
+          class="modal-close waves-effect waves-green btn-flat"
+          onclick="initMap()"
+          >Animate!</a
+        >
       </div>
     </div>
-    <div class="modal-footer">
-      <a class="modal-close waves-effect waves-green btn-flat" onclick="initMap()">Animate!</a>
-    </div>
-  </div>
-  <div id="credits" class="modal">
-    <div class="modal-content">
-      <h4>Credits</h4>
-      <div class="row">
-        <h5>Icons Source</h5>
-        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        <h5>SVG</h5>
-        SVG Manipulations done by <a href="mailto:komalrami13@gmail.com">Komal Rami</a>
+    <div id="credits" class="modal">
+      <div class="modal-content">
+        <h4>Credits</h4>
+        <div class="row">
+          <h5>Icons Source</h5>
+          <div>
+            Icons made by
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+              >Freepik</a
+            >
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+          </div>
+          <h5>SVG</h5>
+          SVG Manipulations done by
+          <a href="mailto:komalrami13@gmail.com">Komal Rami</a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="modal-close waves-effect waves-green btn-flat">Close</a>
       </div>
     </div>
-    <div class="modal-footer">
-      <a class="modal-close waves-effect waves-green btn-flat">Close</a>
-    </div>
-  </div>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    M.AutoInit();
-  </script>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67839623-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-67839623-2');
-</script>
-
-  <script src="index.js" charset="utf-8"></script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgQ0G6BG7zR7o45vm2z96sMBBJyrSsam4&callback=initMap">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      M.AutoInit();
     </script>
-</body>
 
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-67839623-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-67839623-2");
+    </script>
+
+    <script src="index.js" charset="utf-8"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgQ0G6BG7zR7o45vm2z96sMBBJyrSsam4&callback=initMap"
+    ></script>
+  </body>
 </html>
