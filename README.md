@@ -15,3 +15,4 @@ Here's what it looks like in action.
 
 To create your own animated path, head over to the following link!
 https://arjun921.github.io/Google-Maps-Animated-Marker/
+
